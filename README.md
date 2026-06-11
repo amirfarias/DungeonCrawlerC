@@ -3,7 +3,7 @@ Um trabalho, na qual o objetivo é fazer um jogo na linguagem C.
 
 Membros do grupo: Amir de Sousa Farias, Alvaro Brilhante Carvalho e Filipe Cavalcante Brasil Dutra
 
-    <>v^ --- Seu personagem                
+   	 <>v^ --- Seu personagem                
 		* --- Paredes                         
 		# --- Espinhos                         
 		k --- Caixas (Possivel destruir)      
@@ -21,4 +21,4 @@ Membros do grupo: Amir de Sousa Farias, Alvaro Brilhante Carvalho e Filipe Caval
 		D --- Direita                         
 		I --- Interagir                       
 		O --- Ataque                          
-    H --- NPC                  
+   		H --- NPC                  
