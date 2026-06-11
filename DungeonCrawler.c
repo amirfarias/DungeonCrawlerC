@@ -100,7 +100,7 @@ int main()
         {'*', 'k', 'k', 'k', ' ', ' ', ' ', ' ', ' ',' ',' ',' ','*','*','*'},
         {'*', 'k', 'k', 'k', ' ', ' ', ' ', ' ', ' ',' ',' ',' ','*',' ','*'},
         {'*', ' ', ' ', ' ', 'H', ' ', ' ', ' ', ' ',' ',' ',' ','*','D','*'},
-        {'*', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',' ',' ',' ',' ',' ','*'},
+        {'*', '*', '*', ' ', ' ', ' ', ' ', ' ', ' ',' ',' ',' ',' ',' ','*'},
         {'*', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',' ',' ',' ',' ',' ','*'},
         {'*', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',' ',' ',' ',' ',' ','*'},
         {'*', ' ', ' ', ' ', ' ', '*', '*', '*', '*',' ',' ',' ',' ',' ','*'},
@@ -111,6 +111,60 @@ int main()
         {'*', 'o', ' ', 'D', ' ', ' ', ' ', ' ', ' ',' ',' ',' ',' ',' ','*'},
         {'*', '*', '*', '*', '*', '*', '*', '*', '*','*','*','*','*','*','*'}
     };
+    
+    char vila3[25][25] = {
+
+{'*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*'},
+
+{'*','k','k','k',' ',' ',' ',' ',' ',' ',' ',' ','*','*','*',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
+
+{'*','k','k','k',' ',' ',' ',' ',' ',' ',' ',' ',' ','*','*',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
+
+{'*','k','k','k',' ',' ',' ',' ',' ',' ',' ',' ','*','*','*',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
+
+{'*',' ',' ',' ','H',' ',' ',' ',' ','k','k','k',' @','D',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
+
+{'*',' ',' ',' ',' ',' ',' ',' ',' ','k','k','k',' ','*','*','k','k','k','k','k','k','k','k','k','*'},
+
+{'*',' ',' ',' ',' ',' ',' ',' ','*','*','*','*','*','*','*','k','k','k','k','k','k','k','k','k','*'},
+
+{'*',' ',' ',' ',' ',' ',' ',' ','*',' ',' ',' ',' ',' ','*','k','k','k','k','k','k','k','k','k','*'},
+
+{'*',' ',' ',' ',' ','*','*','*',' ',' ',' ',' ',' ',' ','*','k','k','k','k','k','k','k','k','k','*'},
+
+{'*',' ',' ',' ',' ',' ','k','k',' ',' ',' ',' ',' ',' ','*',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
+
+{'*',' ',' ','*',' ','k','k','k','*',' ',' ',' ',' ',' ','*',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
+
+{'*',' ','*','*',' ','k','k','k',' ',' ',' ',' ',' ',' ','*',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
+
+{'*','*','#','*','*','@',' ',' ',' ',' ',' ',' ',' ',' ','*',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
+
+{'*','o',' ','D',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*',' ',' ',' ',' ',' ','@',' ',' ',' ','*'},
+	
+{'*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','D','*','*','*','*'},
+
+{'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
+
+{'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
+
+{'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
+
+{'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
+
+{'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
+
+{'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
+
+{'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
+
+{'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
+
+{'*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','*'},
+
+{'*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*'}
+
+};
     
     char input;
     char arma_atual = ' ';
@@ -547,7 +601,7 @@ int main()
         }
         
     }
-    
+    vila1:
     if(vida_bot < 1){ vida_bot = 1; }
     if(vida_botP < 1){ vida_botP = 1; }
 
@@ -741,7 +795,7 @@ int main()
 			getch();
 			system("cls");
 			
-			goto vila;
+			goto vila1;
 		}
     
     vila1[x][y] = ' ';
@@ -1522,8 +1576,12 @@ int main()
             }
         } 
         
-        vila2[12][2] = '#';
+        if(x == 1 && y == 13){ 
+			system("cls");
+			break; 
+		}
         
+        vila2[12][2] = '#';
         if(x == 12 && y == 2){
 			vida--;
 			if(vida == 0){
@@ -2365,5 +2423,846 @@ int main()
         
     }
     
-	return 0;
+    vila3:
+    
+    x = 7, y = 6;
+    vila3[x][y] = '>';
+    
+    for(i = 0; i < 25; i++){
+        for(j = 0; j < 25; j++){
+            printf("%c ", vila3[i][j]);
+        }
+        printf("\n");
+    }
+    
+    while(1)
+    {
+        input = getch();
+        limpar();
+        int chave=0;
+        
+        if(input == 's' || input == 'S'){ // Pra baixo
+            if(x < 24){
+            
+                if(vila3[x+1][y] != '*' && vila3[x+1][y] != 'D' && vila3[x+1][y] != '/' && vila3[x+1][y] != '`' && vila3[x+1][y] != 'H'&&vila3[x+1][y] != 'k'){ 
+                    	if(vila3[x+1][y]='@'){
+					chave=chave+1;
+				          }
+					vila3[x][y] = ' ';
+                    x = x + 1;
+                    vila3[x][y] = 'v';
+                }
+            }
+        }else if(input == 'w' || input == 'W'){ // Pra Cima
+            if(x > 0){
+            	
+                if(vila3[x-1][y] != '*' && vila3[x-1][y] != 'D' && vila3[x-1][y] != '/' && vila3[x-1][y] != '`' && vila3[x-1][y] != 'H' &&vila3[x-1][y] != 'k'){ 
+                    	if(vila3[x-1][y]='@'){
+					chave=chave+1;
+				}
+					vila3[x][y] = ' ';
+                    x = x - 1;
+                    vila3[x][y] = '^';
+                }
+            }
+        }else if(input == 'd' || input == 'D'){ // Pra direita
+            if(y < 24){
+            	
+                if(vila3[x][y+1] != '*' && vila3[x][y+1] != 'D' && vila3[x][y+1] != '/' && vila3[x][y+1] != '`' && vila3[x][y+1] != 'H' &&vila3[x][y+1] != 'k'){ 
+                   	if(vila3[x][y+1]='@'){
+					chave=chave+1;
+				}
+				    vila3[x][y] = ' ';
+                    y = y + 1;
+                    vila3[x][y] = '>';
+                }
+            }
+        }else if(input == 'a' || input == 'A'){ // Pra esquerda
+            if(y > 0){
+            	
+                if(vila3[x][y-1] != '*' && vila3[x][y-1] != 'D' && vila3[x][y-1] != '/' && vila3[x][y-1] != '`' && vila3[x][y-1] != 'H' && vila3[x][y-1] != 'k'){ 
+                    	if(vila3[x][y-1]='@'){
+					chave=chave+1;
+				}
+					vila3[x][y] = ' ';
+                    y = y - 1;       
+                    vila3[x][y] = '<';
+                }
+            }
+        } 
+        if (vila3[x][y]== vila3[13][1]){
+			vila3[2][13]=' ';
+		}
+		
+		if(vila3[x][y] == vila3[1][1]){
+			chave = 1;
+			;
+		}
+      
+       
+		//porta
+           if(vila3[x][y]==vila3[1][1]){
+			   chave=chave+1;
+		   }
+   if(vila3[x][y]== vila3[13][5]){
+   	
+	   if(vila3[x][y]==vila3[13][5]){
+		   if(chave==1){
+			   vila3[13][3] ='=';
+			  
+		   }
+	   }
+	   
+   }
+     if(vila3[x][y]== vila3[4][12]){
+   	
+	   if(vila3[x][y]==vila3[4][12]){
+		   if(chave==1){
+			   vila3[4][13] ='=';
+		   }
+	   }
+	   
+   }
+    if(vila3[x][y]== vila3[13][20]){
+   	
+	   if(vila3[x][y]==vila3[13][20]){
+		   if(chave==1){
+			   vila3[14][20] ='=';
+		   }
+	   }
+	   
+   }
+  		 
+        if (input == 'i' || input == 'I') {
+           
+            if (vila3[x+1][y] == 'H' || vila3[x-1][y] == 'H' || vila3[x][y+1] == 'H' || vila3[x][y-1] == 'H') {
+                
+                system("cls");
+                
+                printf("--- npc buxa ---\n");
+                printf("escolhe ae mano\n");
+                printf("1: Espada\n");
+                printf("2: Arco\n");
+                printf("3: Cajado\n");
+                printf("-----------------\n");
+                printf("Escolha o numero da arma para selecionar.\nCaso nao queira digite qualquer tecla.");
+                char escolha = getch(); 
+
+                if (escolha == '1') {
+                    arma_atual = 'E';
+                    printf("\n\nVoce equipou a ESPADA!");
+                } 
+                else if (escolha == '2') {
+                    arma_atual = 'A';
+                    printf("\n\nVoce equipou o ARCO!");
+                } 
+                else if (escolha == '3') {
+                    arma_atual = 'C';
+                    printf("\n\nVoce equipou o CAJADO!");
+                }
+
+                printf("\nPressione qualquer tecla para fechar o menu");
+                getch(); 
+                system("cls");
+            } 
+        } 
+        
+
+        if(input == 'o' || input == 'O') {
+           
+//espada
+          
+            if (arma_atual == 'E') {
+                if(vila3[x][y]=='v'){
+                    if(x+1 < 25 && vila3[x+1][y]=='*'){
+                        vila3[x+1][y]='*';
+                    }else if(x+1 < 25 && vila3[x+1][y]=='@'){
+						vila3[x+1][y]='@';
+					}else  if(x+1 < 25 && vila3[x+1][y]=='D'){
+						vila3[x+1][y]='D';
+					
+					}else if(x+1 < 25 && vila3[x+1][y]=='#'){
+						vila3[x+1][y]='#'; 
+					}else if(x+1 < 25 && vila3[x+1][y]=='o'){
+						vila3[x+1][y]='o';
+					}else if(x+1 < 25 && vila3[x+1][y]!='*'){
+                        vila3[x+1][y]=' ';
+                    } 
+                     if(x+2 < 25 && vila3[x+2][y]=='*'){
+                        vila3[x+2][y]='*';
+                    }else if(x+2 < 25 && vila3[x+2][y]=='@'){
+						vila3[x+2][y]='@';
+					}else  if(x+2 < 25 && vila3[x+2][y]=='D'){
+						vila3[x+2][y]='D';
+					}else if(x+2 < 25 && vila3[x+2][y]=='#'){
+						vila3[x+2][y]='#'; 
+					}else if(x+2 < 25 && vila3[x+2][y]=='o'){
+						vila3[x+2][y]='o';
+					}else if(x+2 < 25 && vila3[x+2][y]!='*'){
+                        vila3[x+2][y]=' ';
+					}
+                     if(x+1 < 25 && y+1 < 25 && vila3[x+1][y+1]=='*'){
+                        vila3[x+1][y+1]='*';
+                    }else if(x+1 < 25 && y+1 < 25 && vila3[x+1][y+1]=='@'){
+						vila3[x+1][y+1]='@';
+					} else if(x+1 < 25 && y+1 < 25 && vila3[x+1][y+1]=='D'){
+						vila3[x+1][y+1]='D';
+					}else if(x+1 < 25 && y+1 < 25 && vila3[x+1][y+1]=='#'){
+						vila3[x+1][y+1]='#';
+					}else if(x+1 < 25 && y+1 < 25 && vila3[x+1][y+1]=='o'){
+						vila3[x+1][y+1]='o';
+					}else if(x+1 < 25 && y+1 < 25 && vila3[x+1][y+1]!='*'){
+                        vila3[x+1][y+1]=' ';
+                    } 
+                    
+                    if(x+2 < 25 && y+1 < 25 && vila3[x+2][y+1]=='*'){
+                        vila3[x+2][y+1]='*';
+                    }else if(x+2 < 25 && y+1 < 25 && vila3[x+2][y+1]=='@'){
+						vila3[x+2][y+1]='@';
+					} else if(x+2 < 25 && y+1 < 25 && vila3[x+2][y+1]=='D'){
+						vila3[x+2][y+1]='D';
+					}else if(x+2 < 25 && y+1 < 25 && vila3[x+2][y+1]=='#'){
+						vila3[x+2][y+1]='#';
+					}else if(x+2 < 25 && y+1 < 25 && vila3[x+2][y+1]=='o'){
+						vila3[x+2][y+1]='o';
+					}else if(x+2 < 25 && y+1 < 25 && vila3[x+2][y+1]!='*'){
+                        vila3[x+2][y+1]=' ';
+                    } 
+                    
+                    if(x+1 < 25 && y-1 >= 0 && vila3[x+1][y-1]=='*'){
+                        vila3[x+1][y-1]='*';
+                    }else if(x+1 < 25 && y-1 >= 0 && vila3[x+1][y-1]=='@'){
+						vila3[x+1][y-1]='@';
+					} else if(x+1 < 25 && y-1 >= 0 && vila3[x+1][y-1]=='D'){
+						vila3[x+1][y-1]='D';
+					}else if(x+1 < 25 && y-1 >= 0 && vila3[x+1][y-1]=='#'){
+						vila3[x+1][y-1]='#';
+					}else if(x+1 < 25 && y-1 >= 0 && vila3[x+1][y-1]=='o'){
+						vila3[x+1][y-1]='o';
+					}else if(x+1 < 25 && y-1 >= 0 && vila3[x+1][y-1]!='*'){
+                        vila3[x+1][y-1]=' ';
+                    } 
+                    if(x+2 < 25 && y-1 >= 0 && vila3[x+2][y-1]=='*'){
+                        vila3[x+2][y-1]='*';
+                    }else if(x+2 < 25 && y-1 >= 0 && vila3[x+2][y-1]=='@'){
+						vila3[x+2][y-1]='@';
+					} else if(x+2 < 25 && y-1 >= 0 && vila3[x+2][y-1]=='D'){
+						vila3[x+2][y-1]='D';
+					}else if(x+2 < 25 && y-1 >= 0 && vila3[x+2][y-1]=='#'){
+						vila3[x+2][y-1]='#';
+					}else if(x+2 < 25 && y-1 >= 0 && vila3[x+2][y-1]=='o'){
+						vila3[x+2][y-1]='o';
+					}else if(x+2 < 25 && y-1 >= 0 && vila3[x+2][y-1]!='*'){
+                        vila3[x+2][y-1]=' ';
+                    } 
+                }
+                
+                if(vila3[x][y]=='>'){
+                     if(y+1 < 25 && vila3[x][y+1]=='*'){
+                        vila3[x][y+1]='*';
+                    }else if(y+1 < 25 && vila3[x][y+1]=='@'){
+						vila3[x][y+1]='@';
+					}else  if(y+1 < 25 && vila3[x][y+1]=='D'){
+						vila3[x][y+1]='D';
+					}else if(y+1 < 25 && vila3[x][y+1]=='#'){
+						vila3[x][y+1]='#'; 
+					}else if(y+1 < 25 && vila3[x][y+1]=='o'){
+						vila3[x][y+1]='o';
+					}else if(y+1 < 25 && vila3[x][y+1]!='*'){
+                        vila3[x][y+1]=' ';	
+						}
+                    if(y+2 < 25 && vila3[x][y+2]=='*'){
+                        vila3[x][y+2]='*';
+                    }else if(y+2 < 25 && vila3[x][y+2]=='@'){
+						vila3[x][y+2]='@';
+					}else  if(y+2 < 25 && vila3[x][y+2]=='D'){
+						vila3[x][y+2]='D';
+					
+					}else if(y+2 < 25 && vila3[x][y+2]=='#'){
+						vila3[x][y+2]='#'; 
+					}else if(y+2 < 25 && vila3[x][y+2]=='o'){
+						vila3[x][y+2]='o';
+					}else if(y+2 < 25 && vila3[x][y+2]!='*'){
+                        vila3[x][y+2]=' ';
+                    } 
+                    
+                     if(x+1 < 25 && y+1 < 25 && vila3[x+1][y+1]=='*'){
+                        vila3[x+1][y+1]='*';
+                    }else if(x+1 < 25 && y+1 < 25 && vila3[x+1][y+1]=='@'){
+						vila3[x+1][y+1]='@';
+					} else if(x+1 < 25 && y+1 < 25 && vila3[x+1][y+1]=='D'){
+						vila3[x+1][y+1]='D';
+					}else if(x+1 < 25 && y+1 < 25 && vila3[x+1][y+1]=='#'){
+						vila3[x+1][y+1]='#';
+					}else if(x+1 < 25 && y+1 < 25 && vila3[x+1][y+1]=='o'){
+						vila3[x+1][y+1]='o';
+					}else if(x+1 < 25 && y+1 < 25 && vila3[x+1][y+1]!='*'){
+                        vila3[x+1][y+1]=' ';
+                    } 
+                      if(x+1 < 25 && y+2 < 25 && vila3[x+1][y+2]=='*'){
+                        vila3[x+1][y+2]='*';
+                    }else if(x+1 < 25 && y+2 < 25 && vila3[x+1][y+2]=='@'){
+						vila3[x+1][y+2]='@';
+					} else if(x+1 < 25 && y+2 < 25 && vila3[x+1][y+2]=='D'){
+						vila3[x+1][y+2]='D';
+					}else if(x+1 < 25 && y+2 < 25 && vila3[x+1][y+2]=='#'){
+						vila3[x+1][y+2]='#';
+					}else if(x+1 < 25 && y+2 < 25 && vila3[x+1][y+2]=='o'){
+						vila3[x+1][y+2]='o';
+					}else if(x+1 < 25 && y+2 < 25 && vila3[x+1][y+2]!='*'){
+                        vila3[x+1][y+2]=' ';
+                    } 
+                    
+                    if(x-1 >= 0 && y+1 < 25 && vila3[x-1][y+1]=='*'){
+                        vila3[x-1][y+1]='*';
+                    }else if(x-1 >= 0 && y+1 < 25 && vila3[x-1][y+1]=='@'){
+						vila3[x-1][y+1]='@';
+					}else if(x-1 >= 0 && y+1 < 25 && vila3[x-1][y+1]=='D'){
+						vila3[x-1][y+1]='D';
+				    }else if(x-1 >= 0 && y+1 < 25 && vila3[x-1][y+1]=='#'){
+						vila3[x-1][y+1]='#';
+			     	}else if(x-1 >= 0 && y+1 < 25 && vila3[x-1][y+1]=='o'){
+						vila3[x-1][y+1]='o';
+				    }else if(x-1 >= 0 && y+1 < 25 && vila3[x-1][y+1]!='*'){
+                        vila3[x-1][y+1]=' ';
+                    } 
+                    if(x-1 >= 0 && y+2 < 25 && vila3[x-1][y+2]=='*'){
+                        vila3[x-1][y+2]='*';
+                    }else if(x-1 >= 0 && y+2 < 25 && vila3[x-1][y+2]=='@'){
+						vila3[x-1][y+2]='@';
+					}else if(x-1 >= 0 && y+2 < 25 && vila3[x-1][y+2]=='D'){
+						vila3[x-1][y+2]='D';
+				    }else if(x-1 >= 0 && y+2 < 25 && vila3[x-1][y+2]=='#'){
+						vila3[x-1][y+2]='#';
+			     	}else if(x-1 >= 0 && y+2 < 25 && vila3[x-1][y+2]=='o'){
+						vila3[x-1][y+2]='o';
+				    }else if(x-1 >= 0 && y+2 < 25 && vila3[x-1][y+2]!='*'){
+                        vila3[x-1][y+2]=' ';
+                    } 
+                }
+                
+                if(vila3[x][y]=='<'){
+                    if(y-1 >= 0 && vila3[x][y-1]=='*'){
+                        vila3[x][y-1]='*';
+                    }else  if(y-1 >= 0 && vila3[x][y-1]=='@'){
+						 vila3[x][y-1]='@';
+					}else 
+					if(y-1 >= 0 && vila3[x][y-1]=='D'){
+						 vila3[x][y-1]='D';
+					}else
+					if(y-1 >= 0 && vila3[x][y-1]=='#'){
+						 vila3[x][y-1]='#';
+					}else 
+					if(y-1 >= 0 && vila3[x][y-1]=='o'){
+						 vila3[x][y-1]='o';
+					}else if(y-1 >= 0 && vila3[x][y-1]!='*'){
+                        vila3[x][y-1]=' ';
+                    } 
+                    if(y-2 >= 0 && vila3[x][y-2]=='*'){
+                        vila3[x][y-2]='*';
+                    }else  if(y-2 >= 0 && vila3[x][y-2]=='@'){
+						 vila3[x][y-2]='@';
+					}else 	if(y-2 >= 0 && vila3[x][y-2]=='D'){
+						 vila3[x][y-2]='D';
+					}else if(y-2 >= 0 && vila3[x][y-2]=='#'){
+						 vila3[x][y-2]='#';
+					}else if(y-2 >= 0 && vila3[x][y-2]=='o'){
+						 vila3[x][y-2]='o';
+					}else if(y-2 >= 0 && vila3[x][y-2]!='*'){
+                        vila3[x][y-2]=' ';
+                    } 
+				
+					
+					
+                    
+                    if(x+1 < 25 && y-1 >= 0 && vila3[x+1][y-1]=='*'){
+                        vila3[x+1][y-1]='*';
+                    }else  if(x+1 < 25 && y-1 >= 0 && vila3[x+1][y-1]=='@'){
+						 vila3[x+1][y-1]='@';
+					}else if(x+1 < 25 && y-1 >= 0 && vila3[x+1][y-1]!='*'){
+                        vila3[x+1][y-1]=' ';
+                    }
+                    if(x+1 < 25 && y-2 >= 0 && vila3[x+1][y-2]=='*'){
+                        vila3[x+1][y-2]='*';
+                    }else if(x+1 < 25 && y-2 >= 0 && vila3[x+1][y-2]=='@'){
+						 vila3[x+1][y-2]='@';
+					}else	if(x+1 < 25 && y-2 >= 0 && vila3[x+1][y-2]!='*'){
+                        vila3[x+1][y-2]=' ';
+                    }
+                    /////////////////////////////////////////////
+                    if(x-1 >= 0 && y-1 >= 0 && vila3[x-1][y-1]=='*'){
+                        vila3[x-1][y-1]='*';
+                    }else if(x-1 >= 0 && y-1 >= 0 && vila3[x-1][y-1]=='@'){
+						vila3[x-1][y-1]='@';
+					} else if(x-1 >= 0 && y-1 >= 0 && vila3[x-1][y-1]=='D'){
+						vila3[x-1][y-1]='D';
+					}else if(x-1 >= 0 && y-1 >= 0 && vila3[x-1][y-1]=='#'){
+						vila3[x-1][y-1]='#';
+					}else if(x-1 >= 0 && y-1 >= 0 && vila3[x-1][y-1]=='o'){
+						vila3[x-1][y-1]='o';
+					}else if(x-1 >= 0 && y-1 >= 0 && vila3[x-1][y-1]!='*'){
+                        vila3[x-1][y-1]=' ';
+                    } 
+                   if(x-1 >= 0 && y-2 >= 0 && vila3[x-1][y-2]=='*'){
+                        vila3[x-1][y-2]='*';
+                    }else if(x-1 >= 0 && y-2 >= 0 && vila3[x-1][y-2]=='@'){
+						vila3[x-1][y-2]='@';
+					} else if(x-1 >= 0 && y-2 >= 0 && vila3[x-1][y-2]=='D'){
+						vila3[x-1][y-2]='D';
+					}else if(x-1 >= 0 && y-2 >= 0 && vila3[x-1][y-2]=='#'){
+						vila3[x-1][y-2]='#';
+					}else if(x-1 >= 0 && y-2 >= 0 && vila3[x-1][y-2]=='o'){
+						vila3[x-1][y-2]='o';
+					}else if(x-1 >= 0 && y-2 >= 0 && vila3[x-1][y-2]!='*'){
+                        vila3[x-1][y-2]=' ';
+                    } 
+                }
+                
+                if(vila3[x][y]=='^'){
+                     if(x-1 >= 0 && vila3[x-1][y]=='*'){
+                        vila3[x-1][y]='*';
+                    }else  if(x-1 >= 0 && vila3[x-1][y]=='@'){
+						 vila3[x-1][y]='@';
+					}else 
+					if(x-1 >= 0 && vila3[x-1][y]=='D'){
+						 vila3[x-1][y]='D';
+					}else
+					if(x-1 >= 0 && vila3[x-1][y]=='#'){
+						 vila3[x-1][y]='#';
+					}else 
+					if(x-1 >= 0 && vila3[x-1][y]=='o'){
+						 vila3[x-1][y]='o';
+					}else if(x-1 >= 0 && vila3[x-1][y]!='*'){
+                        vila3[x-1][y]=' ';
+                    } 
+                    
+                     if(x-2 >= 0 && vila3[x-2][y]=='*'){
+                        vila3[x-2][y]='*';
+                    }else  if(x-2 >= 0 && vila3[x-2][y]=='@'){
+						 vila3[x-2][y]='@';
+					}else 
+					if(x-2 >= 0 && vila3[x-2][y]=='D'){
+						 vila3[x-2][y]='D';
+					}else
+					if(x-2 >= 0 && vila3[x-2][y]=='#'){
+						 vila3[x-2][y]='#';
+					}else 
+					if(x-2 >= 0 && vila3[x-2][y]=='o'){
+						 vila3[x-2][y]='o';
+					}else if(x-2 >= 0 && vila3[x-2][y]!='*'){
+                        vila3[x-2][y]=' ';
+                    } 
+                    if(x-2 >= 0 && y+1 < 25 && vila3[x-2][y+1]=='*'){
+                        vila3[x-2][y+1]='*';
+                    }else  if(x-2 >= 0 && y+1 < 25 && vila3[x-2][y+1]=='@'){
+						  vila3[x-2][y+1]='@';
+					}else if(x-2 >= 0 && y+1 < 25 && vila3[x-2][y+1]=='D'){
+						  vila3[x-2][y+1]='D';
+					}else if(x-2 >= 0 && y+1 < 25 && vila3[x-2][y+1]=='#'){
+						  vila3[x-2][y+1]='#';
+					}else  if(x-2 >= 0 && y+1 < 25 && vila3[x-2][y+1]=='o'){
+						  vila3[x-2][y+1]='o';
+					}else if(x-2 >= 0 && y+1 < 25 && vila3[x-2][y+1]!='*'){
+                        vila3[x-2][y+1]=' ';
+                    }
+                    
+                    if(x-1 >= 0 && y-1 >= 0 && vila3[x-1][y-1]=='*'){
+                        vila3[x-1][y-1]='*';
+                    }else if(x-1 >= 0 && y-1 >= 0 && vila3[x-1][y-1]=='@'){
+						  vila3[x-1][y-1]='@';
+					}else  if(x-1 >= 0 && y-1 >= 0 && vila3[x-1][y-1]=='D'){
+						  vila3[x-1][y-1]='D';
+					}else  if(x-1 >= 0 && y-1 >= 0 && vila3[x-1][y-1]=='#'){
+						  vila3[x-1][y-1]='#';
+					}else  if(x-1 >= 0 && y-1 >= 0 && vila3[x-1][y-1]=='o'){
+						  vila3[x-1][y-1]='o';
+					}else if(x-1 >= 0 && y-1 >= 0 && vila3[x-1][y-1]!='*'){
+                        vila3[x-1][y-1]=' ';
+                    } 
+                    if(x-2 >= 0 && y-1 >= 0 && vila3[x-2][y-1]=='*'){
+                        vila3[x-2][y-1]='*';
+                    }else if(x-2 >= 0 && y-1 >= 0 && vila3[x-2][y-1]=='@'){
+						  vila3[x-2][y-1]='@';
+					}else  if(x-2 >= 0 && y-1 >= 0 && vila3[x-2][y-1]=='D'){
+						  vila3[x-2][y-1]='D';
+					}else  if(x-2 >= 0 && y-1 >= 0 && vila3[x-2][y-1]=='#'){
+						  vila3[x-2][y-1]='#';
+					}else  if(x-2 >= 0 && y-1 >= 0 && vila3[x-2][y-1]=='o'){
+						  vila3[x-2][y-1]='o';
+					}else if(x-2 >= 0 && y-1 >= 0 && vila3[x-2][y-1]!='*'){
+                        vila3[x-2][y-1]=' ';
+                    } 
+                 if(x-1 >= 0 && y+1 < 25 && vila3[x-1][y+1]=='*'){
+                        vila3[x-1][y+1]='*';
+                    }else if(x-1 >= 0 && y+1 < 25 && vila3[x-1][y+1]=='@'){
+						vila3[x-1][y+1]='@';
+					}else if(x-1 >= 0 && y+1 < 25 && vila3[x-1][y+1]=='D'){
+						vila3[x-1][y+1]='D';
+				    }else if(x-1 >= 0 && y+1 < 25 && vila3[x-1][y+1]=='#'){
+						vila3[x-1][y+1]='#';
+			     	}else if(x-1 >= 0 && y+1 < 25 && vila3[x-1][y+1]=='o'){
+						vila3[x-1][y+1]='o';
+				    }else if(x-1 >= 0 && y+1 < 25 && vila3[x-1][y+1]!='*'){
+                        vila3[x-1][y+1]=' ';
+                    } 
+                }
+            }
+
+			//arco
+            else if (arma_atual == 'A') {
+                if(vila3[x][y]=='^'){
+                    if(x-1 >= 0 && vila3[x-1][y]=='*'){
+                        vila3[x-1][y]='*';
+                    }else  if(x-1 >= 0 && vila3[x-1][y]=='@'){
+                        vila3[x-1][y]='@';
+                    }else  if(x-1 >= 0 && vila3[x-1][y]=='D'){
+                        vila3[x-1][y]='D';
+                    }else  if(x-1 >= 0 && vila3[x-1][y]=='#'){
+                        vila3[x-1][y]='#';
+                    }else  if(x-1 >= 0 && vila3[x-1][y]=='o'){
+                        vila3[x-1][y]='o';
+                    }else if(x-1 >= 0 && vila3[x-1][y]!='*'){    
+                        vila3[x-1][y]=' ';
+                    } 
+                     if(x-2 >= 0 && vila3[x-2][y]=='*'){
+                        vila3[x-2][y]='*';
+                    }else  if(x-2 >= 0 && vila3[x-2][y]=='@'){
+                        vila3[x-2][y]='@';
+                    }else  if(x-2 >= 0 && vila3[x-2][y]=='D'){
+                        vila3[x-2][y]='D';
+                    }else  if(x-2 >= 0 && vila3[x-2][y]=='#'){
+                        vila3[x-2][y]='#';
+                    }else  if(x-2 >= 0 && vila3[x-2][y]=='o'){
+                        vila3[x-2][y]='o';
+                    }else if(x-2 >= 0 && vila3[x-2][y]!='*'){    
+                        vila3[x-2][y]=' ';
+                    } 
+                    if(x-3 >= 0 && vila3[x-3][y]=='*'){
+                        vila3[x-3][y]='*';
+                    }else  if(x-3 >= 0 && vila3[x-3][y]=='@'){
+                        vila3[x-3][y]='@';
+                    }else  if(x-3 >= 0 && vila3[x-3][y]=='D'){
+                        vila3[x-3][y]='D';
+                    }else  if(x-3 >= 0 && vila3[x-3][y]=='#'){
+                        vila3[x-3][y]='#';
+                    }else  if(x-3 >= 0 && vila3[x-3][y]=='o'){
+                        vila3[x-3][y]='o';
+                    }else if(x-3 >= 0 && vila3[x-3][y]!='*'){    
+                        vila3[x-3][y]=' ';
+                    } 
+                   if(x-4 >= 0 && vila3[x-4][y]=='*'){
+                        vila3[x-4][y]='*';
+                    }else  if(x-4 >= 0 && vila3[x-4][y]=='@'){
+                        vila3[x-4][y]='@';
+                    }else  if(x-4 >= 0 && vila3[x-4][y]=='D'){
+                        vila3[x-4][y]='D';
+                    }else  if(x-4 >= 0 && vila3[x-4][y]=='#'){
+                        vila3[x-4][y]='#';
+                    }else  if(x-4 >= 0 && vila3[x-4][y]=='o'){
+                        vila3[x-4][y]='o';
+                    }else if(x-4 >= 0 && vila3[x-4][y]!='*'){    
+                        vila3[x-4][y]=' ';
+                    } 
+                }
+                if(vila3[x][y]=='v'){
+                    if(x+1 < 25 && vila3[x+1][y]=='*'){
+                        vila3[x+1][y]='*';
+                    }else  if(x+1 < 25 && vila3[x+1][y]=='@'){
+                        vila3[x+1][y]='@';
+                    }else  if(x+1 < 25 && vila3[x+1][y]=='D'){
+                        vila3[x+1][y]='D';
+                    }else  if(x+1 < 25 && vila3[x+1][y]=='#'){
+                        vila3[x+1][y]='#';
+                    }else  if(x+1 < 25 && vila3[x+1][y]=='o'){
+                        vila3[x+1][y]='o';
+                    }else if(x+1 < 25 && vila3[x+1][y]!='*'){    
+                        vila3[x+1][y]=' ';
+                    } 
+                    if(x+2 < 25 && vila3[x+2][y]=='*'){
+                        vila3[x+2][y]='*';
+                    }else  if(x+2 < 25 && vila3[x+2][y]=='@'){
+                        vila3[x+2][y]='@';
+                    }else  if(x+2 < 25 && vila3[x+2][y]=='D'){
+                        vila3[x+2][y]='D';
+                    }else  if(x+2 < 25 && vila3[x+2][y]=='#'){
+                        vila3[x+2][y]='#';
+                    }else  if(x+2 < 25 && vila3[x+2][y]=='o'){
+                        vila3[x+2][y]='o';
+                    }else if(x+2 < 25 && vila3[x+2][y]!='*'){    
+                        vila3[x+2][y]=' ';
+                    } 
+                     if(x+3 < 25 && vila3[x+3][y]=='*'){
+                        vila3[x+3][y]='*';
+                    }else  if(x+3 < 25 && vila3[x+3][y]=='@'){
+                        vila3[x+3][y]='@';
+                    }else  if(x+3 < 25 && vila3[x+3][y]=='D'){
+                        vila3[x+3][y]='D';
+                    }else  if(x+3 < 25 && vila3[x+3][y]=='#'){
+                        vila3[x+3][y]='#';
+                    }else  if(x+3 < 25 && vila3[x+3][y]=='o'){
+                        vila3[x+3][y]='o';
+                    }else if(x+3 < 25 && vila3[x+3][y]!='*'){    
+                        vila3[x+3][y]=' ';
+                    } 
+                    if(x+4 < 25 && vila3[x+4][y]=='*'){
+                        vila3[x+4][y]='*';
+                    }else  if(x+4 < 25 && vila3[x+4][y]=='@'){
+                        vila3[x+4][y]='@';
+                    }else  if(x+4 < 25 && vila3[x+4][y]=='D'){
+                        vila3[x+4][y]='D';
+                    }else  if(x+4 < 25 && vila3[x+4][y]=='#'){
+                        vila3[x+4][y]='#';
+                    }else  if(x+4 < 25 && vila3[x+4][y]=='o'){
+                        vila3[x+4][y]='o';
+                    }else if(x+4 < 25 && vila3[x+4][y]!='*'){    
+                        vila3[x+4][y]=' ';
+                    } 
+                }
+                if(vila3[x][y]=='>'){
+                    if(y+1 < 25 && vila3[x][y+1]=='*'){
+                        vila3[x][y+1]='*';
+                    }else  if(y+1 < 25 && vila3[x][y+1]=='@'){
+                        vila3[x][y+1]='@';
+                    }else  if(y+1 < 25 && vila3[x][y+1]=='D'){
+                        vila3[x][y+1]='D';
+                    }else  if(y+1 < 25 && vila3[x][y+1]=='#'){
+                        vila3[x][y+1]='#';
+                    }else  if(y+1 < 25 && vila3[x][y+1]=='o'){
+                        vila3[x][y+1]='o';
+                    }else if(y+1 < 25 && vila3[x][y+1]!='*'){    
+                        vila3[x][y+1]=' ';
+                    } 
+                    if(y+2 < 25 && vila3[x][y+2]=='*'){
+                        vila3[x][y+2]='*';
+                    }else  if(y+2 < 25 && vila3[x][y+2]=='@'){
+                        vila3[x][y+2]='@';
+                    }else  if(y+2 < 25 && vila3[x][y+2]=='D'){
+                        vila3[x][y+2]='D';
+                    }else  if(y+2 < 25 && vila3[x][y+2]=='#'){
+                        vila3[x][y+2]='#';
+                    }else  if(y+2 < 25 && vila3[x][y+2]=='o'){
+                        vila3[x][y+2]='o';
+                    }else if(y+2 < 25 && vila3[x][y+2]!='*'){    
+                        vila3[x][y+2]=' ';
+                    } 
+                    if(y+3 < 25 && vila3[x][y+3]=='*'){
+                        vila3[x][y+3]='*';
+                    }else  if(y+3 < 25 && vila3[x][y+3]=='@'){
+                        vila3[x][y+3]='@';
+                    }else  if(y+3 < 25 && vila3[x][y+3]=='D'){
+                        vila3[x][y+3]='D';
+                    }else  if(y+3 < 25 && vila3[x][y+3]=='#'){
+                        vila3[x][y+3]='#';
+                    }else  if(y+3 < 25 && vila3[x][y+3]=='o'){
+                        vila3[x][y+3]='o';
+                    }else if(y+3 < 25 && vila3[x][y+3]!='*'){    
+                        vila3[x][y+3]=' ';
+                    } 
+                    if(y+4 < 25 && vila3[x][y+4]=='*'){
+                        vila3[x][y+4]='*';
+                    }else  if(y+4 < 25 && vila3[x][y+4]=='@'){
+                        vila3[x][y+4]='@';
+                    }else  if(y+4 < 25 && vila3[x][y+4]=='D'){
+                        vila3[x][y+4]='D';
+                    }else  if(y+4 < 25 && vila3[x][y+4]=='#'){
+                        vila3[x][y+4]='#';
+                    }else  if(y+4 < 25 && vila3[x][y+4]=='o'){
+                        vila3[x][y+4]='o';
+                    }else if(y+4 < 25 && vila3[x][y+4]!='*'){    
+                        vila3[x][y+4]=' ';
+                    } 
+                }
+                if(vila3[x][y]=='<'){
+                    if(y-1 >= 0 && vila3[x][y-1]=='*'){
+                        vila3[x][y-1]='*';
+                    }else  if(y-1 >= 0 && vila3[x][y-1]=='@'){
+                        vila3[x][y-1]='@';
+                    }else  if(y-1 >= 0 && vila3[x][y-1]=='D'){
+                        vila3[x][y-1]='D';
+                    }else  if(y-1 >= 0 && vila3[x][y-1]=='#'){
+                        vila3[x][y-1]='#';
+                    }else  if(y-1 >= 0 && vila3[x][y-1]=='o'){
+                        vila3[x][y-1]='o';
+                    }else if(y-1 >= 0 && vila3[x][y-1]!='*'){    
+                        vila3[x][y-1]=' ';
+                    } 
+                     if(y-2 >= 0 && vila3[x][y-2]=='*'){
+                        vila3[x][y-2]='*';
+                    }else  if(y-2 >= 0 && vila3[x][y-2]=='@'){
+                        vila3[x][y-2]='@';
+                    }else  if(y-2 >= 0 && vila3[x][y-2]=='D'){
+                        vila3[x][y-2]='D';
+                    }else  if(y-2 >= 0 && vila3[x][y-2]=='#'){
+                        vila3[x][y-1]='#';
+                    }else  if(y-2 >= 0 && vila3[x][y-2]=='o'){
+                        vila3[x][y-2]='o';
+                    }else if(y-2 >= 0 && vila3[x][y-2]!='*'){    
+                        vila3[x][y-2]=' ';
+                    } 
+                     if(y-3 >= 0 && vila3[x][y-3]=='*'){
+                        vila3[x][y-3]='*';
+                    }else  if(y-3 >= 0 && vila3[x][y-3]=='@'){
+                        vila3[x][y-3]='@';
+                    }else  if(y-3 >= 0 && vila3[x][y-3]=='D'){
+                        vila3[x][y-3]='D';
+                    }else  if(y-3 >= 0 && vila3[x][y-3]=='#'){
+                        vila3[x][y-3]='#';
+                    }else  if(y-3 >= 0 && vila3[x][y-3]=='o'){
+                        vila3[x][y-3]='o';
+                    }else if(y-3 >= 0 && vila3[x][y-3]!='*'){    
+                        vila3[x][y-3]=' ';
+                    } 
+                     if(y-4 >= 0 && vila3[x][y-4]=='*'){
+                        vila3[x][y-4]='*';
+                    }else  if(y-4 >= 0 && vila3[x][y-4]=='@'){
+                        vila3[x][y-4]='@';
+                    }else  if(y-4 >= 0 && vila3[x][y-4]=='D'){
+                        vila3[x][y-4]='D';
+                    }else  if(y-4 >= 0 && vila3[x][y-4]=='#'){
+                        vila3[x][y-4]='#';
+                    }else  if(y-4 >= 0 && vila3[x][y-4]=='o'){
+                        vila3[x][y-4]='o';
+                    }else if(y-4 >= 0 && vila3[x][y-4]!='*'){    
+                        vila3[x][y-4]=' ';
+                    } 
+                }
+            }
+               //cajado
+            else if (arma_atual == 'C') {
+                // Diagonais
+                
+                if(x+1 < 15 && y-1 >= 0 && vila3[x+1][y-1]=='*'){
+                        vila3[x+1][y-1]='*';
+                    }else if(x+1 < 25 && y-1 >= 0 && vila3[x+1][y-1]=='@'){
+						vila3[x+1][y-1]='@';
+					} else if(x+1 < 25 && y-1 >= 0 && vila3[x+1][y-1]=='D'){
+						vila3[x+1][y-1]='D';
+					}else if(x+1 < 25 && y-1 >= 0 && vila3[x+1][y-1]=='#'){
+						vila3[x+1][y-1]='#';
+					}else if(x+1 < 25 && y-1 >= 0 && vila3[x+1][y-1]=='o'){
+						vila3[x+1][y-1]='o';
+					}else if(x+1 < 25 && y-1 >= 0 && vila3[x+1][y-1]!='*'){
+                        vila3[x+1][y-1]=' ';
+                    } 
+                 if(x-1 >= 0 && y-1 >= 0 && vila3[x-1][y-1]=='*'){
+                        vila3[x-1][y-1]='*';
+                    }else if(x-1 >= 0 && y-1 >= 0 && vila3[x-1][y-1]=='@'){
+						vila3[x-1][y-1]='@';
+					} else if(x-1 >= 0 && y-1 >= 0 && vila3[x-1][y-1]=='D'){
+						vila3[x-1][y-1]='D';
+					}else if(x-1 >= 0 && y-1 >= 0 && vila3[x-1][y-1]=='#'){
+						vila3[x-1][y-1]='#';
+					}else if(x-1 >= 0 && y-1 >= 0 && vila3[x-1][y-1]=='o'){
+						vila3[x-1][y-1]='o';
+					}else if(x-1 >= 0 && y-1 >= 0 && vila3[x-1][y-1]!='*'){
+                        vila3[x-1][y-1]=' ';
+                    } 
+                 if(x+1 < 25 && y+1 < 25 && vila3[x+1][y+1]=='*'){
+                        vila3[x+1][y+1]='*';
+                    }else if(x+1 < 25 && y+1 < 25 && vila3[x+1][y+1]=='@'){
+						vila3[x+1][y+1]='@';
+					} else if(x+1 < 25 && y+1 < 25 && vila3[x+1][y+1]=='D'){
+						vila3[x+1][y+1]='D';
+					}else if(x+1 < 25 && y+1 < 25 && vila3[x+1][y+1]=='#'){
+						vila3[x+1][y+1]='#';
+					}else if(x+1 < 25 && y+1 < 25 && vila3[x+1][y+1]=='o'){
+						vila3[x+1][y+1]='o';
+					}else if(x+1 < 25 && y+1 < 25 && vila3[x+1][y+1]!='*'){
+                        vila3[x+1][y+1]=' ';
+                    } 
+                if(x-1 >= 0 && y+1 < 25 && vila3[x-1][y+1]=='*'){
+                        vila3[x-1][y+1]='*';
+                    }else if(x-1 >= 0 && y+1 < 25 && vila3[x-1][y+1]=='@'){
+						vila3[x-1][y+1]='@';
+					}else if(x-1 >= 0 && y+1 < 25 && vila3[x-1][y+1]=='D'){
+						vila3[x-1][y+1]='D';
+				    }else if(x-1 >= 0 && y+1 < 25 && vila3[x-1][y+1]=='#'){
+						vila3[x-1][y+1]='#';
+			     	}else if(x-1 >= 0 && y+1 < 25 && vila3[x-1][y+1]=='o'){
+						vila3[x-1][y+1]='o';
+				    }else if(x-1 >= 0 && y+1 < 25 && vila3[x-1][y+1]!='*'){
+                        vila3[x-1][y+1]=' ';
+                    } 
+                // Reto
+               if(x+1 < 25 && vila3[x+1][y]=='*'){
+                        vila3[x+1][y]='*';
+                    }else if(x+1 < 25 && vila3[x+1][y]=='@'){
+						vila3[x+1][y]='@';
+					}else  if(x+1 < 25 && vila3[x+1][y]=='D'){
+						vila3[x+1][y]='D';
+					
+					}else if(x+1 < 25 && vila3[x+1][y]=='#'){
+						vila3[x+1][y]='#'; 
+					}else if(x+1 < 25 && vila3[x+1][y]=='o'){
+						vila3[x+1][y]='o';
+					}else if(x+1 < 25 && vila3[x+1][y]!='*'){
+                        vila3[x+1][y]=' ';
+                    } 
+                if(x-1 >= 0 && vila3[x-1][y]=='*'){
+                        vila3[x-1][y]='*';
+                    }else  if(x-1 >= 0 && vila3[x-1][y]=='@'){
+						 vila3[x-1][y]='@';
+					}else 
+					if(x-1 >= 0 && vila3[x-1][y]=='D'){
+						 vila3[x-1][y]='D';
+					}else
+					if(x-1 >= 0 && vila3[x-1][y]=='#'){
+						 vila3[x-1][y]='#';
+					}else 
+					if(x-1 >= 0 && vila3[x-1][y]=='o'){
+						 vila3[x-1][y]='o';
+					}else if(x-1 >= 0 && vila3[x-1][y]!='*'){
+                        vila3[x-1][y]=' ';
+                    } 
+               if(y+1 < 15 && vila3[x][y+1]=='*'){
+                        vila3[x][y+1]='*';
+                    }else if(y+1 < 25 && vila3[x][y+1]=='@'){
+						vila3[x][y+1]='@';
+					}else  if(y+1 < 25 && vila3[x][y+1]=='D'){
+						vila3[x][y+1]='D';
+					}else if(y+1 < 25 && vila3[x][y+1]=='#'){
+						vila3[x][y+1]='#'; 
+					}else if(y+1 < 25 && vila3[x][y+1]=='o'){
+						vila3[x][y+1]='o';
+					}else if(y+1 < 25 && vila3[x][y+1]!='*'){
+                        vila3[x][y+1]=' ';	
+						}
+                  if(y-1 >= 0 && vila3[x][y-1]=='*'){
+                        vila3[x][y-1]='*';
+                    }else  if(y-1 >= 0 && vila3[x][y-1]=='@'){
+						 vila3[x][y-1]='@';
+					}else 
+					if(y-1 >= 0 && vila3[x][y-1]=='D'){
+						 vila3[x][y-1]='D';
+					}else
+					if(y-1 >= 0 && vila3[x][y-1]=='#'){
+						 vila3[x][y-1]='#';
+					}else 
+					if(y-1 >= 0 && vila3[x][y-1]=='o'){
+						 vila3[x][y-1]='o';
+					}else if(y-1 >= 0 && vila3[x][y-1]!='*'){
+                        vila3[x][y-1]=' ';
+                    } 
+            }
+        }
+               
+
+        if(x+1 < 25 && vila3[x+1][y] == vila3[4][4]){ vila3[4][4]='H'; }
+        if(x-1 >= 0 && vila3[x-1][y] == vila3[4][4]){ vila3[4][4]='H'; }
+        if(y+1 < 25 && vila3[x][y+1] == vila3[4][4]){ vila3[4][4]='H'; }
+        if(y-1 >= 0 && vila3[x][y-1] == vila3[4][4]){ vila3[4][4]='H'; }
+
+
+        for(i = 0; i < 25; i++){
+            for(j = 0; j < 25; j++){
+                printf("%c ", vila3[i][j]);
+            }
+            printf("\n");
+	
+		        }
+        
+        
+    }
+    
+    return 0;
 }
